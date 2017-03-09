@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/cctomato/XLSlideView", :tag => "#{s.version}" }
 
-  s.source_files  = "XLSlideView/*.{h,m}"
+  s.source_files  = "XLSlideView/*.{h,m}", "XLSlideView/**/*.{h,m}"
 
   s.requires_arc = true
 
