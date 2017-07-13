@@ -1,11 +1,11 @@
 # XLSlideView
 XLSlideView is a multi-UIViewController management container.
 
-#Usage
+## Usage
 
 XLSlideView offers two different styles, including XLCornerSlideView and XLLineSlideView.
 
-- ###XLCornerSlideView
+- ### XLCornerSlideView
 
     ![snapshot](/Snapshots/corner.gif)
 
@@ -34,7 +34,7 @@ XLSlideView offers two different styles, including XLCornerSlideView and XLLineS
     }
     ```
 
-- ####XLLineSlideView
+- #### XLLineSlideView
 
     ![snapshot](/Snapshots/line.gif)
 
@@ -63,9 +63,9 @@ XLSlideView offers two different styles, including XLCornerSlideView and XLLineS
     }
     ```
 
-- ####Please refer to Demo for more settings
+- #### Please refer to Demo for more settings
 
-#Installation
+## Installation
 
 Use CocoaPods
 
@@ -73,6 +73,6 @@ Use CocoaPods
 pod 'XLSlideView'
 ```
 
-#License
+## License
 
 MIT

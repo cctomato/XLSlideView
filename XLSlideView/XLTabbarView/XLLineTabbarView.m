@@ -138,6 +138,8 @@ static const NSInteger XLBaseIndex = 1000;
     UILabel *newTitleLabel = [self viewWithTag:(index + XLBaseIndex)];
     newTitleLabel.textColor = self.selectedColor;
     self.fromIndex = index;
+    
+    [self setNeedsLayout];
 }
 
 - (void)switchingFrom:(NSInteger)fromIndex to:(NSInteger)toIndex percent:(CGFloat)percent
