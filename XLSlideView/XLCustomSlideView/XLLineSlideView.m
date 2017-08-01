@@ -95,6 +95,8 @@
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex
 {
+    _selectedIndex = selectedIndex;
+    
     self.tabBarView.selectedIndex = selectedIndex;
     self.slideView.selectedIndex = selectedIndex;
 }
@@ -110,6 +112,8 @@
 
 - (void)XLLineTabbar:(id)sender selectAt:(NSInteger)index
 {
+    _selectedIndex = index;
+    
     self.slideView.selectedIndex = index;
 }
 
@@ -120,6 +124,8 @@
 
 - (void)XLSlideView:(XLSlideView *)slideView didSwitchTo:(NSInteger)index
 {
+    _selectedIndex = index;
+    
     self.tabBarView.selectedIndex = index;
 }
 
