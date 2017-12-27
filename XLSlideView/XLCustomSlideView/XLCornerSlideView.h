@@ -18,6 +18,9 @@
 @required
 - (NSInteger)numberOfControllersInXLCornerSlideView:(XLCornerSlideView *)sender;
 - (UIViewController *)XLCornerSlideView:(XLCornerSlideView *)sender controllerAt:(NSInteger)index;
+
+@optional
+- (void)XLCornerSlideViewDidChange;
 @end
 
 @interface XLCornerSlideView : UIView<XLSlideViewDelegate, XLSlideViewDataSource, XLCornerTabbarViewDelegate>

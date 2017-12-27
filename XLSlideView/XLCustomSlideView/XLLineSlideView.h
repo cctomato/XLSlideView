@@ -19,6 +19,8 @@
 - (NSInteger)numberOfControllersInXLLineSlideView:(XLLineSlideView *)sender;
 - (UIViewController *)XLLineSlideView:(XLLineSlideView *)sender controllerAt:(NSInteger)index;
 
+@optional
+- (void)XLLineSlideViewDidChange;
 @end
 
 @interface XLLineSlideView : UIView<XLSlideViewDelegate, XLSlideViewDataSource, XLLineTabbarViewDelegate>

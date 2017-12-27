@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "XLSlideView"
-  s.version      = "1.2"
+  s.version      = "1.3"
   s.summary      = "XLSlideView is a multi-UIViewController management container."
   s.description  = "XLSlideView offers two different styles, including XLCornerSlideView and XLLineSlideView."
   s.homepage     = "https://github.com/cctomato/XLSlideView"

@@ -125,6 +125,10 @@
     _selectedIndex = index;
     
     self.slideView.selectedIndex = index;
+    
+    if ([self.delegate respondsToSelector:@selector(XLCornerSlideViewDidChange)]) {
+        [self.delegate XLCornerSlideViewDidChange];
+    }
 }
 
 - (NSInteger)numberOfControllersInXLSlideView:(XLSlideView *)sender
@@ -151,6 +155,10 @@
     _selectedIndex = index;
     
     self.tabBarView.selectedIndex = index;
+    
+    if ([self.delegate respondsToSelector:@selector(XLCornerSlideViewDidChange)]) {
+        [self.delegate XLCornerSlideViewDidChange];
+    }
 }
 
 - (void)XLSlideView:(XLSlideView *)slideView switchCanceled:(NSInteger)oldIndex
