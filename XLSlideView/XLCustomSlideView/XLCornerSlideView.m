@@ -38,6 +38,7 @@
 - (void)commonInit
 {
     self.tabBarHeight = 44;
+    self.animationTime = 0.25;
     
     [self addSubview:self.tabBarView];
     [self addSubview:self.slideView];
@@ -94,6 +95,12 @@
 - (void)setTabBarColor:(UIColor *)tabBarColor
 {
     self.tabBarView.customBackgroundColor = tabBarColor;
+}
+
+- (void)setAnimationTime:(CGFloat)animationTime
+{
+    self.slideView.animationTime = animationTime;
+    self.tabBarView.animationTime = animationTime;
 }
 
 - (void)setItemArray:(NSArray<NSString *> *)itemArray

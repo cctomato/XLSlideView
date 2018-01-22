@@ -144,7 +144,7 @@ static const NSInteger XLBaseIndex = 1000;
                 rc = CGRectUnion(rc, rightFrame);
             }
             
-            [UIView animateWithDuration:0.4 animations:^{
+            [UIView animateWithDuration:self.animationTime animations:^{
                 [self.scrollView scrollRectToVisible:rc animated:YES];
                 self.selectedBackgroundView.frame = newTitleLabel.frame;
                 oldTitleLabel.textColor = self.normalColor;
@@ -179,7 +179,7 @@ static const NSInteger XLBaseIndex = 1000;
     CGFloat instance = (toLabel.frame.origin.x - fromLabel.frame.origin.x) * percent;
     CGFloat width = (toLabel.frame.size.width - fromLabel.frame.size.width) * percent;
     
-    [UIView animateWithDuration:0.4 animations:^{
+    [UIView animateWithDuration:self.animationTime animations:^{
         self.selectedBackgroundView.frame = CGRectMake(fromFrame.origin.x + instance, selectedBackgroungFrame.origin.y, fromFrame.size.width + width, selectedBackgroungFrame.size.height);
     }];
 }

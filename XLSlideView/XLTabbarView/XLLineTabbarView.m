@@ -117,7 +117,7 @@ static const NSInteger XLBaseIndex = 1000;
             UILabel *oldTitleLabel = [self viewWithTag:(XLBaseIndex + self.fromIndex)];
             UILabel *newTitleLabel = [self viewWithTag:(XLBaseIndex + index)];
             
-            [UIView animateWithDuration:0.4 animations:^{
+            [UIView animateWithDuration:self.animationTime animations:^{
                 CGRect trackFrame = self.trackView.frame;
                 self.trackView.frame = CGRectMake(newTitleLabel.frame.origin.x, trackFrame.origin.y, trackFrame.size.width, trackFrame.size.height);
                 oldTitleLabel.textColor = self.normalColor;
@@ -151,7 +151,7 @@ static const NSInteger XLBaseIndex = 1000;
     
     CGFloat instance = (toLabel.frame.origin.x - fromLabel.frame.origin.x) * percent;
     
-    [UIView animateWithDuration:0.4 animations:^{
+    [UIView animateWithDuration:self.animationTime animations:^{
         self.trackView.frame = CGRectMake(fromLabel.frame.origin.x + instance, trackFrame.origin.y, trackFrame.size.width, trackFrame.size.height);
     }];
 }

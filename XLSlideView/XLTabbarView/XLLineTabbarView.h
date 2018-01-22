@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UIColor *normalColor;
 @property (nonatomic, strong) UIColor *selectedColor;
 @property (nonatomic, strong) UIFont *normalFont;
+@property (nonatomic, assign) CGFloat animationTime;
 @property (nonatomic, strong) NSArray<NSString *> *itemArray;
 @property (nonatomic, weak) id<XLLineTabbarViewDelegate> delegate;
 

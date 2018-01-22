@@ -25,6 +25,7 @@
 @property (nonatomic, strong) UIColor *normalColor;
 @property (nonatomic, assign) CGFloat normalSpace;
 @property (nonatomic, strong) UIFont *normalFont;
+@property (nonatomic, assign) CGFloat animationTime;
 @property (nonatomic, weak) id<XLCornerTabbarViewDelegate> delegate;
 
 - (void)switchingFrom:(NSInteger)fromIndex to:(NSInteger)toIndex percent:(CGFloat)percent;

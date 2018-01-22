@@ -32,6 +32,7 @@
 @property (nonatomic, weak) UIViewController *baseViewController;
 @property (nonatomic, weak) id<XLSlideViewDataSource> dataSource;
 @property (nonatomic, weak) id<XLSlideViewDelegate> delegate;
+@property (nonatomic, assign) CGFloat animationTime;
 
 - (void)disbleTap;
 - (void)switchTo:(NSInteger)index;

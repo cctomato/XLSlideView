@@ -38,6 +38,7 @@ static const CGFloat switchOffset = 50.0f;
     self.fromIndex = -1;
     self.toIndex = -1;
     self.isSwitching = NO;
+    self.animationTime = 0.25;
     
     [self addGestureRecognizer:self.panGesture];
     
@@ -109,7 +110,7 @@ static const CGFloat switchOffset = 50.0f;
         newViewController.view.frame = newStartRect;
         [newViewController willMoveToParentViewController:self.baseViewController];
         
-        [self.baseViewController transitionFromViewController:self.fromViewController toViewController:newViewController duration:0.4 options:0 animations:^{
+        [self.baseViewController transitionFromViewController:self.fromViewController toViewController:newViewController duration:self.animationTime options:0 animations:^{
             newViewController.view.frame = nowRect;
             self.fromViewController.view.frame = oldEndRect;
         } completion:^(BOOL finished) {
@@ -227,7 +228,7 @@ static const CGFloat switchOffset = 50.0f;
         if ((self.toIndex >= 0 && self.toIndex < [self.dataSource numberOfControllersInXLSlideView:self]) && self.toIndex != self.fromIndex) {
             if (fabs(offsetX) > switchOffset) {
                 NSTimeInterval animatedTime = 0;
-                animatedTime = fabs(self.bounds.size.width - fabs(offsetX)) / self.bounds.size.width * 0.4;
+                animatedTime = fabs(self.bounds.size.width - fabs(offsetX)) / self.bounds.size.width * self.animationTime;
                 [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
                 [UIView animateWithDuration:animatedTime animations:^{
                     [self repositionForOffsetX:(offsetX > 0 ? self.bounds.size.width : -self.bounds.size.width)];

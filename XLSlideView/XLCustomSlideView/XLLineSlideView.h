@@ -33,6 +33,7 @@
 @property (nonatomic, strong) UIColor *selectedColor;
 @property (nonatomic, strong) UIColor *normalColor;
 @property (nonatomic, strong) UIColor *tabBarColor;
+@property (nonatomic, assign) CGFloat animationTime;
 
 @property(nonatomic, weak) id<XLLineSlideViewDelegate> delegate;
 @end

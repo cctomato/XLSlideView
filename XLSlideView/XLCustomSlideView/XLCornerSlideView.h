@@ -35,7 +35,7 @@
 @property (nonatomic, assign) CGFloat normalSpace;
 @property (nonatomic, strong) UIFont *normalFont;
 @property (nonatomic, assign) CGFloat tabBarHeight;
-
+@property (nonatomic, assign) CGFloat animationTime;
 
 @property(nonatomic, weak) id<XLCornerSlideViewDelegate> delegate;
 @end
