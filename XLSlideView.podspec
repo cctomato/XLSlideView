@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/cctomato/XLSlideView", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/cctomato/XLSlideView.git", :tag => "#{s.version}" }
 
   s.source_files  = "XLSlideView/*.{h,m}", "XLSlideView/**/*.{h,m}"
 
