@@ -7,11 +7,11 @@
 //
 
 #import "XLLineViewController.h"
-#import "XLLineSlideView.h"
+#import "XLLineScrollSlideView.h"
 #import "XLChildViewController.h"
 
-@interface XLLineViewController ()<XLLineSlideViewDelegate>
-@property (nonatomic, strong) XLLineSlideView *slideView;
+@interface XLLineViewController ()<XLLineScrollSlideViewDelegate>
+@property (nonatomic, strong) XLLineScrollSlideView *slideView;
 @property (nonatomic, strong) NSArray<NSString *> *itemArray;
 @end
 
@@ -20,18 +20,27 @@
 - (NSArray<NSString *> *)itemArray
 {
     if (_itemArray == nil) {
-        _itemArray = @[@"View1", @"View2", @"View3"];
+        _itemArray = @[@"View2view23", @"view23", @"View3View2view23View2view23", @"view23", @"view23", @"view23", @"view23"];
     }
     return _itemArray;
 }
 
-- (XLLineSlideView *)slideView
+- (XLLineScrollSlideView *)slideView
 {
     if (_slideView == nil) {
-        _slideView = [[XLLineSlideView alloc] initWithFrame:CGRectMake(0, 20 + 44, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 20 - 44)];
+        _slideView = [[XLLineScrollSlideView alloc] init];
         _slideView.delegate = self;
+        _slideView.selectedColor = [UIColor redColor];
     }
     return _slideView;
+}
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    
+    CGFloat top =  [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.frame.size.height;
+    self.slideView.frame = CGRectMake(0, top, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - top);
 }
 
 - (void)viewDidLoad {
@@ -51,15 +60,14 @@
     self.slideView.itemArray = self.itemArray;
     self.slideView.selectedIndex = 0;
     [self.view addSubview:self.slideView];
-
 }
 
-- (NSInteger)numberOfControllersInXLLineSlideView:(XLLineSlideView *)sender
+- (NSInteger)numberOfControllersInXLLineScrollSlideView:(XLLineScrollSlideView *)sender
 {
     return self.itemArray.count;
 }
 
-- (UIViewController *)XLLineSlideView:(XLLineSlideView *)sender controllerAt:(NSInteger)index
+- (UIViewController *)XLLineScrollSlideView:(XLLineScrollSlideView *)sender controllerAt:(NSInteger)index
 {
     XLChildViewController *viewController = [[XLChildViewController alloc] init];
     viewController.titleString = [self.itemArray objectAtIndex:index];

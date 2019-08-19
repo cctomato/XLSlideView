@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3349B210230A468600A890CF /* XLLineScrollSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349B20F230A468600A890CF /* XLLineScrollSlideView.m */; };
+		3349B213230A46E800A890CF /* XLLineScrollTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349B212230A46E800A890CF /* XLLineScrollTabbarView.m */; };
 		3362C9D21E6FFF9600F51575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362C9D11E6FFF9600F51575 /* main.m */; };
 		3362C9D51E6FFF9600F51575 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362C9D41E6FFF9600F51575 /* AppDelegate.m */; };
 		3362C9D81E6FFF9600F51575 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362C9D71E6FFF9600F51575 /* ViewController.m */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3349B20E230A468600A890CF /* XLLineScrollSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLineScrollSlideView.h; sourceTree = "<group>"; };
+		3349B20F230A468600A890CF /* XLLineScrollSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLineScrollSlideView.m; sourceTree = "<group>"; };
+		3349B211230A46E800A890CF /* XLLineScrollTabbarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLineScrollTabbarView.h; sourceTree = "<group>"; };
+		3349B212230A46E800A890CF /* XLLineScrollTabbarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLineScrollTabbarView.m; sourceTree = "<group>"; };
 		3362C9CD1E6FFF9600F51575 /* XLSlideViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLSlideViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3362C9D11E6FFF9600F51575 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3362C9D31E6FFF9600F51575 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +137,8 @@
 				3362CA3B1E7005E000F51575 /* XLCornerSlideView.m */,
 				3362CA3C1E7005E000F51575 /* XLLineSlideView.h */,
 				3362CA3D1E7005E000F51575 /* XLLineSlideView.m */,
+				3349B20E230A468600A890CF /* XLLineScrollSlideView.h */,
+				3349B20F230A468600A890CF /* XLLineScrollSlideView.m */,
 			);
 			path = XLCustomSlideView;
 			sourceTree = "<group>";
@@ -152,6 +160,8 @@
 				3362CA461E7005E000F51575 /* XLCornerTabbarView.m */,
 				3362CA471E7005E000F51575 /* XLLineTabbarView.h */,
 				3362CA481E7005E000F51575 /* XLLineTabbarView.m */,
+				3349B211230A46E800A890CF /* XLLineScrollTabbarView.h */,
+				3349B212230A46E800A890CF /* XLLineScrollTabbarView.m */,
 			);
 			path = XLTabbarView;
 			sourceTree = "<group>";
@@ -197,6 +207,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -227,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3349B210230A468600A890CF /* XLLineScrollSlideView.m in Sources */,
 				3362CA4B1E7005E000F51575 /* XLSlideLRUCache.m in Sources */,
 				3362CA061E70021000F51575 /* XLLineViewController.m in Sources */,
 				3362CA4C1E7005E000F51575 /* XLSlideView.m in Sources */,
@@ -235,6 +247,7 @@
 				3362CA031E70020700F51575 /* XLCornerViewController.m in Sources */,
 				3362CA4A1E7005E000F51575 /* XLLineSlideView.m in Sources */,
 				3362C9D51E6FFF9600F51575 /* AppDelegate.m in Sources */,
+				3349B213230A46E800A890CF /* XLLineScrollTabbarView.m in Sources */,
 				3362CA4E1E7005E000F51575 /* XLLineTabbarView.m in Sources */,
 				3362C9D21E6FFF9600F51575 /* main.m in Sources */,
 				3362CA091E70022200F51575 /* XLChildViewController.m in Sources */,
